@@ -10,7 +10,7 @@ class Patient(models.Model):
 
     fullName = models.CharField(max_length=100)
     age = models.PositiveIntegerField()
-    gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
+    gender = models.CharField(max_length=20, choices=GENDER_CHOICES)
     doctorName = models.CharField(max_length=100)
     insuranceProvider = models.CharField(max_length=100)
     policyNumber = models.CharField(max_length=100)

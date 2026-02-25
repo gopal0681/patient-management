@@ -17,11 +17,14 @@ const AddPatient = () => {
   });
 
   function handleChange(e) {
+    console.log("Changing:", e.target.name, e.target.value);
     setPatient({ ...patient, [e.target.name]: e.target.value });
   }
 
  const handleSubmit = (e) => {
   e.preventDefault();
+
+    console.log("Submitting patient:", patient);
 
   addPatient(patient)
     .then(() => {
