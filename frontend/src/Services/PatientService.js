@@ -2,6 +2,10 @@ import axios from "axios";
 
 const BASE_URL = `${process.env.REACT_APP_API_URL}/api/patients/`;
 
+export const getPatients = () => {
+  return axios.get(BASE_URL);
+};
+
 export const addPatient = (patient) => {
   return axios.post(BASE_URL, {
     name: patient.fullName,
