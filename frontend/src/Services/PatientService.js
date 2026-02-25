@@ -8,7 +8,7 @@ export const getPatients = () => {
 
 export const addPatient = (patient) => {
   return axios.post(BASE_URL, {
-    name: patient.fullName,
+    fullNamename: patient.fullName,
     age: patient.age,
     gender: patient.gender,
     insurance_provider: patient.insuranceProvider,
