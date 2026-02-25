@@ -8,12 +8,12 @@ export const getPatients = () => {
 
 export const addPatient = (patient) => {
   return axios.post(BASE_URL, {
-    fullNamename: patient.fullName,
-    age: patient.age,
+    fullName: patient.fullName,
+    age: parseInt(patient.age),
     gender: patient.gender,
-    insurance_provider: patient.insuranceProvider,
-    policy_number: patient.policyNumber,
-    doctor_name: patient.doctorName
+    insuranceProvider: patient.insuranceProvider,
+    policyNumber: patient.policyNumber,
+    doctorName: patient.doctorName
   });
 };
 
