@@ -43,12 +43,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'patients',
 ]
-CORS_ALLOWED_ORIGINS = ["https://patient-management-1-hwge.onrender.com", "http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["https://patient-management-frontend-hrss.onrender.com"]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -105,6 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = ["https://patient-management-frontend-hrss.onrender.com"]
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
