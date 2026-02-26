@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <p>© 2026 Patient Management System</p>
-            <p>Developed using Spring Boot & React</p>
+            <p>Developed using Django & React</p>
         </footer>
     );
 }
