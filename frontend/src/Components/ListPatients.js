@@ -80,7 +80,7 @@ const ListPatients = () => {
           <button
             type="button"
             className="btn btn-success"
-            onClick={() => navigate("/addpatient")} >
+            onClick={() => navigate("/add-patient")} >
             Add Patient
           </button>
         </div>

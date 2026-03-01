@@ -106,6 +106,12 @@ h2 {
   display: flex;
   justify-content: center;  
 }
+.add-patient-wrapper .btn {
+  padding: 10px 24px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-top: 20px;
+}
 
 .add-patient-wrapper .btn {
   min-width: 150px;
