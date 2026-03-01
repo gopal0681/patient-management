@@ -1,4 +1,6 @@
 .footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   padding: 15px 10px;
   background: linear-gradient(135deg, #2c3e50, #3498db);
@@ -10,8 +12,15 @@
 
 .footer p {
   margin: 4px 0;
+  height: 20px;
+}
+.footer {
+  padding: 15px 10px;
 }
 
+.footer p {
+  height: 20px;
+}
 
 .footer p:last-child {
   font-size: 13px;

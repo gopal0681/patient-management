@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getPatients, deletePatient } from "../Services/PatientService.js";
 import StatsModal from "./StatsModal.js";
 import "../CSS/List.css";
 
 const ListPatients = () => {
+  const navigate = useNavigate();
   const [patients, setPatients] = useState([]);
   const [selectedPatient, setSelectedPatient] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -38,8 +40,9 @@ const ListPatients = () => {
   return (
     <div className="row justify-content-center">
         <div className="col-12 col-md-10 col-lg-9">
-          <h2> Patient List</h2>
-
+        
+          <h2>Patient List</h2>
+  
         <table className="table table-striped table-hover">
           <thead>
             <tr>
@@ -72,6 +75,15 @@ const ListPatients = () => {
             ))}
           </tbody>
         </table>
+        
+        <div className="add-patient-wrapper">
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={() => navigate("/addpatient")} >
+            Add Patient
+          </button>
+        </div>
 
         {showModal && (
           <StatsModal

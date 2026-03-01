@@ -1,0 +1,121 @@
+.dashboard {
+  position: sticky;
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f9;
+}
+
+.sidebar {
+  position: fixed;
+  top: 70px;              
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 120px);
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.main-content {
+  margin-left: 200px;
+  margin-top: 70px;    
+  margin-bottom: 50px; 
+  padding: 30px;
+  flex: 1;
+}
+
+
+.main-content h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.primary {
+  background-color: #6777ef;
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #5563c1;
+}
+
+button.danger {
+  background-color: #fc544b;
+  color: white;
+}
+
+button.danger:hover {
+  background-color: #d43f3a;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}

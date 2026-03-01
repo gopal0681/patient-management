@@ -21,15 +21,13 @@ const AddPatient = () => {
     setPatient({ ...patient, [e.target.name]: e.target.value });
   }
 
- const handleSubmit = (e) => {
+const handleSubmit = (e) => {
   e.preventDefault();
-
-    console.log("Submitting patient:", patient);
 
   addPatient(patient)
     .then(() => {
       alert("Patient added successfully");
-      navigate("/");
+      navigate("/patients");
     })
     .catch(err => {
       console.error(err);
@@ -97,7 +95,7 @@ const AddPatient = () => {
               required
             />
 
-            <button type="submit" className="btn btn-success w-100">
+            <button type="submit" className="btn btn-success w-100" onClick={handleSubmit}>
               Add Patient
             </button>
           </form>
