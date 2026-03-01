@@ -38,64 +38,64 @@ const ListPatients = () => {
   };
 
   return (
-    <div className="main-content">
-    <div className="row justify-content-center">
-        <div className="col-12 col-md-10 col-lg-9">
-        
-          <h2>Patient List</h2>
-          <div className="add-patient-wrapper">
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={() => navigate("/patients/add")} >
-            Add Patient
-          </button>
-        </div>
-        <div className="table-container">
-          <table className="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th>Full Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Doctor</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {patients.map(patient => (
-                <tr key={patient.id}>
-                  <td>{patient.fullName}</td>
-                  <td>{patient.age}</td>
-                  <td>{patient.gender}</td>
-                  <td>{patient.doctorName}</td>
-                  <td>
-                    <button className="action-buttons" onClick={() => handleView(patient)}>
-                      View
-                    </button>
-                    <button
-                      className="delete-btn"
-                      onClick={() => handleDelete(patient.id)}>
-                      Delete
-                    </button>
-                  </td>
+    
+      <div className="row justify-content-center">
+          <div className="col-12 col-md-10 col-lg-9">
+          
+            <h2>Patient List</h2>
+            <div className="add-patient-wrapper">
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={() => navigate("/patients/add")} >
+              Add Patient
+            </button>
+          </div>
+          <div className="table-container">
+            <table className="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Doctor</th>
+                  <th>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        
+              </thead>
 
-        {showModal && (
-          <StatsModal
-            patient={selectedPatient}
-            onClose={() => setShowModal(false)}
-          />
-        )}
+              <tbody>
+                {patients.map(patient => (
+                  <tr key={patient.id}>
+                    <td>{patient.fullName}</td>
+                    <td>{patient.age}</td>
+                    <td>{patient.gender}</td>
+                    <td>{patient.doctorName}</td>
+                    <td>
+                      <button className="action-buttons" onClick={() => handleView(patient)}>
+                        View
+                      </button>
+                      <button
+                        className="delete-btn"
+                        onClick={() => handleDelete(patient.id)}>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          
+
+          {showModal && (
+            <StatsModal
+              patient={selectedPatient}
+              onClose={() => setShowModal(false)}
+            />
+          )}
+        </div>
       </div>
-    </div>
-  </div>
+
   );
 };
 
