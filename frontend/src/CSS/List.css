@@ -69,7 +69,7 @@ h2 {
   background-color: #eaeaea !important;
 }
 
-.table tbody tr: hover td {
+.table tbody tr:hover td {
   background-color: #e0e0e0;
   transition: background-color 0.2s ease-in-out;
 }
