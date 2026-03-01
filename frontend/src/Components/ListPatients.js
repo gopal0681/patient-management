@@ -51,40 +51,40 @@ const ListPatients = () => {
             Add Patient
           </button>
         </div>
-        <div className="table-container"></>
-        <table className="table table-striped table-hover">
-          <thead>
-            <tr>
-              <th>Full Name</th>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Doctor</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {patients.map(patient => (
-              <tr key={patient.id}>
-                <td>{patient.fullName}</td>
-                <td>{patient.age}</td>
-                <td>{patient.gender}</td>
-                <td>{patient.doctorName}</td>
-                <td>
-                  <button className="action-buttons" onClick={() => handleView(patient)}>
-                    View
-                  </button>
-                   <button
-                    className="delete-btn"
-                    onClick={() => handleDelete(patient.id)}>
-                    Delete
-                   </button>
-                </td>
+        <div className="table-container">
+          <table className="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Doctor</th>
+                <th>Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        
+            </thead>
+
+            <tbody>
+              {patients.map(patient => (
+                <tr key={patient.id}>
+                  <td>{patient.fullName}</td>
+                  <td>{patient.age}</td>
+                  <td>{patient.gender}</td>
+                  <td>{patient.doctorName}</td>
+                  <td>
+                    <button className="action-buttons" onClick={() => handleView(patient)}>
+                      View
+                    </button>
+                    <button
+                      className="delete-btn"
+                      onClick={() => handleDelete(patient.id)}>
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         
 
         {showModal && (
@@ -95,7 +95,7 @@ const ListPatients = () => {
         )}
       </div>
     </div>
-    </div>
+  </div>
   );
 };
 
