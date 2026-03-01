@@ -11,6 +11,13 @@ h2 {
   font-weight: 600;
   color: #1f2d3d;
 }
+<<<<<<< HEAD
+=======
+.main-content {
+  padding-bottom: 80px;
+  justify-content: center;
+}
+>>>>>>> bb85a2dfe384ea106dd0cdec16154dc4d6bc5c13
 
 .table-container {
   margin-top: 40px;
