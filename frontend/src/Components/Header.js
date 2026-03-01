@@ -23,11 +23,16 @@ const Header = () => {
         <ul>
           <li className="dropdown">
             <button className="dropbtn" onClick={handleToggle}>
-              Dashboard ▼
+              Management ▼
             </button>
 
             {isOpen && (
               <ul className="dropdown-menu">
+                <li>
+                  <Link to="/" onClick={handleClose}>
+                    Dashboard
+                  </Link>
+                </li>
                  <li>
                   <Link to="/patients" onClick={handleClose}>
                     Patients

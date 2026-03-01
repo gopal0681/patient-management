@@ -60,7 +60,7 @@ function Dashboard() {
               </div>
               <div className="card-wrap">
                 <div className="card-header">
-                  <h4>Appointments</h4>
+                  <h4>Transactions</h4>
                 </div>
                 <div className="card-body">
                   45
@@ -72,11 +72,11 @@ function Dashboard() {
           <div className="col-lg-3 col-md-6 col-sm-6 col-12">
             <div className="card card-statistic-1">
               <div className="card-icon bg-warning">
-                <i className="fas fa-dollar-sign"></i>
+                <i className="fas fa-rupee-sign"></i>
               </div>
               <div className="card-wrap">
                 <div className="card-header">
-                  <h4>Revenue</h4>
+                  <h4>Hospital Revenue</h4>
                 </div>
                 <div className="card-body">
                   RS.2,300
@@ -103,15 +103,20 @@ function Dashboard() {
         </div>
 
         
-        <div className="card">
+        <div className="card chart-card">
           <div className="card-header">
-            <h4>Monthly Patient Visits</h4>
+            <h4>Monthly Claims</h4>
           </div>
           <div className="card-body">
-            <Line data={data} />
+            <Line
+              data={data}
+              options={{
+                responsive: true,
+                maintainAspectRatio: false
+              }}
+            />
           </div>
-        </div>
-
+</div>
       </section>
     </div>
   );

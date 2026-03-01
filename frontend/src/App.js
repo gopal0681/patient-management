@@ -26,7 +26,7 @@ function App() {
               <Route index element={<Dashboard />} />
               </Route>
               <Route path="/patients" element={<ListPatients />} />
-              <Route path="/addpatient" element={<AddPatient />} />
+              <Route path="/patients/add" element={<AddPatient />} />
               <Route path="/cashless-claim" element={<CashlessClaim />} />
               <Route path="/reimbursement-claim" element={<Reimbursement />} />
               <Route path="/hospital-management" element={<HospitalManagement />} />

@@ -42,6 +42,14 @@ const ListPatients = () => {
         <div className="col-12 col-md-10 col-lg-9">
         
           <h2>Patient List</h2>
+          <div className="add-patient-wrapper">
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={() => navigate("/patients/add")} >
+            Add Patient
+          </button>
+        </div>
   
         <table className="table table-striped table-hover">
           <thead>
@@ -76,14 +84,7 @@ const ListPatients = () => {
           </tbody>
         </table>
         
-        <div className="add-patient-wrapper">
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={() => navigate("/add-patient")} >
-            Add Patient
-          </button>
-        </div>
+        
 
         {showModal && (
           <StatsModal
