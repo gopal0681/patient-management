@@ -11,14 +11,14 @@
   z-index: 1000;
 }
 .logo a {
-    color: #ffffff;          /* White text */
-    text-decoration: none;   /* Remove underline */
+    color: #ffffff;         
+    text-decoration: none;  
 }
 
 .logo a:hover,
 .logo a:focus {
-    color: #ffffff;          /* Keep white on hover */
-    text-decoration: none;   /* No underline on hover */
+    color: #ffffff;          
+    text-decoration: none;   
 }
 .logo {
   color: white !important;
