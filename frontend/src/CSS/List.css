@@ -1,7 +1,16 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  
+  overflow-y: auto;  
+}   
+
 .row {
+  max-height: 500px;
   margin-top: 25px;
   max-width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 h2 {
@@ -11,22 +20,31 @@ h2 {
   font-weight: 600;
   color: #1f2d3d;
 }
+<<<<<<< HEAD
 
 .main-content {
   padding-bottom: 80px;
   justify-content: center;
 }
 
+=======
+>>>>>>> 6ee15da (Added Scroll to table)
 
 .table-container {
   margin-top: 40px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 12px;
 }
-.table-container thead th {
-  position: sticky;
-  top: 0;
-  background: linear-gradient(to right, #2c5364, #203a43);
-  color: white;
-  z-index: 10;
+
+.table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #2c5f8a;
+  border-radius: 10px;
 }
 
 .table {
@@ -40,9 +58,12 @@ h2 {
 }
 
 .table thead {
+  position: sticky;
+  top: 0;
+  color: white;
   background: linear-gradient(90deg, #2b7bb9, #243b55);
   border-collapse: collapse;
-  color: white;
+  z-index: 10;
 }
 
 .table thead th {
