@@ -15,7 +15,7 @@ html, body {
 h2 {
   text-align: center;
   margin-bottom: 25px;
-  margin-top: 70px;
+  margin-top: 60px;
   font-weight: 600;
   color: #1f2d3d;
 }
@@ -29,19 +29,19 @@ h2 {
   width: 100%;
   max-width: 1100px;
   margin: 40px auto 80px auto; 
-  max-height: 350px;   
+  max-height: 500px;   
   overflow-y: auto;
   overflow-x: hidden;
-  border-radius: 14px;
+  border-radius: ;
 }
 
 .table-container::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 .table-container::-webkit-scrollbar-thumb {
   background: #2c5f8a;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .table {
@@ -50,7 +50,8 @@ h2 {
   margin: 0 auto;
   border-collapse: collapse;
   background-color: #f4f4f4;
-  border-radius: 14px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   overflow: hidden;
 }
 
@@ -63,6 +64,7 @@ h2 {
 }
 
 .table thead th {
+  position: sticky;
   padding: 18px;
   font-weight: 600;
   text-align: center;
@@ -146,8 +148,6 @@ h2 {
   font-weight: 500;
   border-radius: 6px;
   margin-top: -10px;
-  margin-bottom: 20px;
+  margin-bottom: -10px;
   min-width: 150px;
 }
-
-
