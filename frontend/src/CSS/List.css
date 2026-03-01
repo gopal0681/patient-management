@@ -11,13 +11,12 @@ h2 {
   font-weight: 600;
   color: #1f2d3d;
 }
-<<<<<<< HEAD
-=======
+
 .main-content {
   padding-bottom: 80px;
   justify-content: center;
 }
->>>>>>> bb85a2dfe384ea106dd0cdec16154dc4d6bc5c13
+
 
 .table-container {
   margin-top: 40px;
@@ -70,7 +69,7 @@ h2 {
   background-color: #eaeaea !important;
 }
 
-.table tbody tr:hover td {
+.table tbody tr: hover td {
   background-color: #e0e0e0;
   transition: background-color 0.2s ease-in-out;
 }
@@ -130,7 +129,8 @@ h2 {
   font-weight: 500;
   border-radius: 6px;
   margin-top: -10px;
-  margin-bottom: -15px;;
+  margin-bottom: 20px;
   min-width: 150px;
 }
+
 
