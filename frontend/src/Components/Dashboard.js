@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Line } from "react-chartjs-2";
+import { Line, Pie } from "react-chartjs-2";
 import { Chart as ChartJS, registerables } from "chart.js";
 import { getPatients } from "../Services/PatientService";
 import "../CSS/Dashboard.css";
@@ -12,7 +12,7 @@ function Dashboard() {
   useEffect(() => {
     getPatients()
       .then((res) => {
-        setPatients(res.data);
+        setPatients(res.data.results);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -28,7 +28,38 @@ function Dashboard() {
       },
     ],
   };
+const maleCount = patients.filter(
+  (p) => p.gender?.toLowerCase() === "male"
+).length;
 
+const femaleCount = patients.filter(
+  (p) => p.gender?.toLowerCase() === "female"
+).length;
+
+const total = maleCount + femaleCount;
+
+const malePercent = total
+  ? Number(((maleCount / total) * 100).toFixed(1))
+  : 0;
+
+const femalePercent = total
+  ? Number(((femaleCount / total) * 100).toFixed(1))
+  : 0;
+
+
+const pieData = {
+  labels: [
+    `Male (${maleCount})`,
+    `Female (${femaleCount})`
+  ],
+  datasets: [
+    {
+      data: [malePercent, femalePercent],
+      backgroundColor: ["#6777ef", "#ff6b81"],
+      borderWidth: 1,
+    },
+  ],
+};
   return (
     <div className="main-content">
       <section className="section">
@@ -116,7 +147,32 @@ function Dashboard() {
               }}
             />
           </div>
-</div>
+        </div>
+        
+        <div className="card chart-card">
+          <div className="card-header">
+            <h4>Gender Distribution (%)</h4>
+          </div>
+          <div className="card-body" style={{ height: "350px" }}>
+            <Pie
+              data={pieData}
+              options={{
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                  tooltip: {
+                    callbacks: {
+                      label: function(context) {
+                        return context.label + ": " + context.raw + "%";
+                      }
+                    }
+                  }
+                }
+              }}
+            />
+          </div>
+        </div>
+                  
       </section>
     </div>
   );
