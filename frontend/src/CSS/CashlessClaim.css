@@ -1,27 +1,47 @@
-.cashless-container {
-  min-height: 70vh;
-  display: flex;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+}
+
+.row {
+  padding-bottom: 80px;
+  padding-top: 40px;
+  margin: 0;
   justify-content: center;
-  align-items: center;
 }
 
-.cashless-card {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 10px;
+.cashlessclaim-header {
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  max-width: 500px;
-  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0 20px;
 }
 
-.cashless-card h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
+
+.cashlessclaim-header h1 {
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.cashless-card p {
-  color: #6c757d;
-  margin: 5px 0;
+
+.cashlessclaim-header p {
+  max-width: 850px;
+  margin: 0 auto;             
+  line-height: 1.7;
+  font-size: 16px;
+  color: #555;
+}
+
+
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;     
+  margin-bottom: 60px;
+}
+
+.table-container .table {
+  width: 100%;
+  max-width: 1100px;
 }

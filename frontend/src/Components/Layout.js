@@ -17,7 +17,7 @@ function Layout() {
           <li><Link to="/hospital-Management" element={<HospitalManagement />}>Hospital Management</Link></li>          
         </ul>
       </aside>
-      
+            
       <main className="main-content">
         <Outlet />
       </main>
