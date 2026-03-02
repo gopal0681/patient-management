@@ -12,7 +12,7 @@ function Dashboard() {
   useEffect(() => {
     getPatients()
       .then((res) => {
-        setPatients(res.data.results);
+        setPatients(res.data);
       })
       .catch((err) => console.log(err));
   }, []);
