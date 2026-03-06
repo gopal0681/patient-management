@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Patient Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I built the Patient Management System to create something on my own rather than follow instructions.
 
-## Available Scripts
+A lot of clinics are still using paper to keep track of their patients, which can get very messy. So I made a web app that puts all the information in one place. the System is really useful for clinics.
 
-In the project directory, you can run:
+You can add patients to the System look at their records, update their information, or remove them if you need to. Working on the project helped me understand how the frontend, backend, and database all work together.
 
-### `npm start`
+Live App:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://patient-management-frontend-hrss.onrender.com/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+GitHub Repository:
 
-### `npm test`
+https://github.com/gopal0681/patient-management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+* You can add records to the System
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* You can view all the patients in the System
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* You can update the details of patients in the System
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* You can delete records from the System
 
-### `npm run eject`
+* The system has an interactive User Interface
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* The system can do things like create, read, update, and delete patient records
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* I used React.js for the System frontend
 
-## Learn More
+* I used HTML for the System frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* I used CSS for the System frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* I used Bootstrap for the System frontend 
 
-### Code Splitting
+* I used JavaScript for the System frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Backend
 
-### Analyzing the Bundle Size
+* I used Django for the System backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* I used Python and Django REST API for the System backend CRUD operations
 
-### Making a Progressive Web App
+### Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* I used MySQL for the System database
 
-### Advanced Configuration
+### Tools
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* I used Git and GitHub for the project
 
-### Deployment
+* I used Render to deploy the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## How to Run the Project
 
-### `npm run build` fails to minify
+1. First, you need to clone the repository. You can do this by typing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+git clone https://github.com/gopal0681/patient-management.git
+
+2. Then you need to go into the project folder. You can do this by typing
+
+cd patient-management
+
+3. Next, you need to start the frontend of the System. You can do this by typing
+
+npm install
+
+and then
+
+npm start
+
+4. After that, you need to start the backend of the System. You will need Python and Django for this. You can do this by typing
+
+python manage.py runserver
+
+## Deployment (Render)
+
+The System frontend is deployed using Render.
+
+1. First, the project code was pushed to GitHub.
+
+2. Then the GitHub repository was connected to Render.
+
+3. On Render, a new Web Service was created and linked to the repository.
+
+4. Render automatically installs the dependencies and builds the project.
+
+5. After the build process finishes, Render provides a public URL where the application can be accessed.
+
+Live App:
+
+https://patient-management-frontend-hrss.onrender.com/
+
+## What I Learned
+
+* I learned how to build REST APIs with Django for the System
+
+* I learned how to connect a React frontend to a backend for the System
+
+* I learned how to do things like create, read, update, and delete with a MySQL database for the System
+
+* I learned how to manage code with Git and GitHub for the System
+
+* I learned how to deploy a project like the System
+
+## Future Improvements
+
+* I want to add a login and authentication Systemfor patients in the System
+
+* I want to add a way to schedule appointments in the System
+
+* I want to add a way to manage doctors in the System
+
+* I want to update other pages with charts as well, not just on the Dashboard page
+
+* I want to improve the user interface and responsiveness of the System
+
+## Author
+
+Santhana Gopal
